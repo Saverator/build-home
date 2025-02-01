@@ -1,0 +1,23 @@
+:root {
+  --font-color: #1E2649;
+  --white: #FFFFFF;
+  --black: #000000;
+  --green: #25A665;
+  --violet: #3B4B91;
+  --lightgray: #D9D9D9;
+}
+
+$font-family: "Inter", sans-serif;
+$second-family: "Manrope", sans-serif;
+$third-family: "Montserrat", sans-serif;
+$font3: "Noto Serif", sans-serif;
+$font-size: 1.25rem;
+
+$brekepoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);

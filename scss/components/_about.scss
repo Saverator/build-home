@@ -1,0 +1,133 @@
+.about {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 0px;
+
+    &__values {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 67px;
+        padding: 50px 0px;
+        width: 100%;
+
+        li {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            gap: 0px;
+
+            @include md-down {
+                width: 140px;
+            }
+
+            .description {
+                font-size: 1.25rem;
+                line-height: 140%;
+                text-align: center;
+                color: #3b4b91;
+
+                @include md-down {
+                    font-size: .9rem;
+                }
+            }
+
+            .value {
+                font-family: $second-family;
+                font-weight: 800;
+                font-size: 2.5rem;
+                line-height: 120%;
+                text-align: center;
+                color: #25a665;
+
+                @include md-down {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    }
+
+    &__description {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: row;
+        gap: 17px;
+        width: 100%;
+        padding: 70px 0px;
+
+        @include xl-down {
+            flex-wrap: wrap;
+        }
+
+        @include md-down {
+            flex-direction: column;
+        }
+
+        &-text {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 32px;
+            max-width: 503px;
+
+            h2 {
+                font-family: $second-family;
+                font-weight: 700;
+                font-size: 2.5rem;
+                line-height: 120%;
+                color: #3b4b91;
+
+                span {
+                    color: #25a665;
+                }
+
+                @include sm-down {
+                    font-size: 2rem;
+                }
+            }
+
+            p {
+                color: #1e2649;
+
+                @include sm-down {
+                    font-size: 1rem;
+                }
+            }
+
+            .about__readmore {
+                border-radius: 50px;
+                padding: 16px 32px;
+                width: 204px;
+                height: 56px;
+                background: #25a665;
+                font-weight: 600;
+                font-size: 1rem;
+                line-height: 150%;
+                text-transform: uppercase;
+                text-align: center;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 50px;
+                padding: 16px 32px;
+                width: 204px;
+                height: 56px;
+                white-space: nowrap;
+
+                &:hover {
+                    background: #198d53;
+                }
+            }
+        }
+
+        &-gallery {
+            max-width: 770px;
+        }
+    }
+}

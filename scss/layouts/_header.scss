@@ -1,0 +1,199 @@
+@import "../abstracts/variables";
+
+.header {
+    background: linear-gradient(180deg, #34427f 0%, rgba(52, 66, 127, 0.84) 53.87%, rgba(52, 66, 127, 0) 100%),
+                url('../images/home.webp') top center / cover no-repeat;
+    padding: 24px 0 225px;
+    width: 100%;
+    height: 808px;
+}
+
+.head {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: var(--white);
+    padding-bottom: 24px;
+
+    @include md-down {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &__logo {
+        display: block;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color: var(--white);
+
+        @include md-down {
+            margin-bottom: 15px;
+        }
+
+        &:hover{
+            color: var(--lightgray);
+        }
+
+        p:first-child {
+            font-family: $font3;
+            font-size: 1.56rem;
+            line-height: 150%;
+            letter-spacing: 0.05em;
+        }
+
+        p:last-child {
+            font-family: $third-family;
+            font-weight: 500;
+            font-size: 0.7rem;
+            line-height: 150%;
+            letter-spacing: 0.05em;
+        }
+    }
+
+    &__description {
+        font-family: $third-family;
+        @include font-properties(.7rem, 500, 150%, var(--white));
+        letter-spacing: 0.05em;
+
+        @include lg-down {
+            display: none;
+        }
+    }
+
+    &__email {
+        @include font-properties(1rem, 400, 130%, var(--white));
+
+        a {
+            color: var(--white);
+            text-decoration: none;
+
+            &:hover {
+                color: var(--lightgray);
+            }
+        }
+    }
+
+    &__vk {
+        @include md-down {
+            display: none;
+        }
+
+        svg path {
+            transition: all .2s;
+        }
+
+        &:hover {
+            svg path {
+                fill-opacity: .8;
+                transition: all .2s;
+            }
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+
+        p {
+            a {
+                color: var(--white);
+                text-decoration: none;
+
+                &:hover {
+                    color: var(--lightgray);
+                }
+            }
+        }
+
+        &:first-child {
+            @include font-properties(1.25rem, 600, 150%, var(--white));
+            text-transform: uppercase;
+        }
+
+        &:last-child {
+            .head-worktime {
+                @include font-properties(.75rem, 500, 130%);
+                color: rgba(255, 255, 255, 0.5);
+                display: inline-block;
+                margin-right: 8px;
+            }
+
+            .head-callme {
+                font-weight: 600;
+                font-size: 1rem;
+                line-height: 150%;
+                text-decoration: underline;
+                text-decoration-skip-ink: none;
+                color: #fff;
+
+                &:hover {
+                    color: var(--lightgray);
+                }
+            }
+        }
+    }
+}
+
+.header-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 100px 0px 140px 0px;
+    margin: 0 auto;
+    color: #fff;
+    max-width: 1176px;
+
+    h1 {
+        font-family: $second-family;
+        font-weight: 700;
+        font-size: 3.5rem;
+        line-height: 110%;
+        text-align: center;
+        margin-bottom: 32px;
+
+        @include sm-down {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__description {
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 130%;
+        text-align: center;
+        margin-bottom: 48px;
+
+        @include sm-down {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__action-button {
+        display: block;
+        border-radius: 50px;
+        padding: 24px 56px;
+        width: 270px;
+        height: 72px;
+        background: #25a665;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 150%;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        color: #fff;
+        white-space: nowrap;
+
+        &:hover {
+            background: #198d53;
+        }
+    }
+}
